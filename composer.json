@@ -1,0 +1,16 @@
+{
+    "name": "drips/scsscompiler",
+    "description": "ScssCompiler zum Übersetzen von SCSS-Dateien in CSS-Dateien mittels PHP",
+    "keywords": ["compiler", "scss"],
+    "license": "MIT",
+    "require": {
+        "php": ">=5.4",
+        "drips/utils": ">=0.1.2",
+        "leafo/scssphp": ">=0.0.12"
+    },
+    "autoload": {
+        "psr-4": {
+            "Drips\\ScssCompiler\\": "src"
+        }
+    }
+}
