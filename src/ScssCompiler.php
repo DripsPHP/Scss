@@ -7,8 +7,14 @@ use Leafo\ScssPhp\Compiler;
 
 class ScssCompiler implements ICompiler
 {
-    public static function compile($string){
-        $scss = new Compiler;
-        return $scss->compile($string);
+    private static $compiler;
+
+    public static function compile($string)
+    {
+        if(static::$compiler == null){
+            static::$compiler = new Compiler;
+        }
+
+        return static::$compiler->compile($string);
     }
 }
