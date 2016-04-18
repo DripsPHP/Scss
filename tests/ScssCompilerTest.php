@@ -5,8 +5,6 @@ namespace tests;
 use Drips\ScssCompiler\ScssCompiler;
 use PHPUnit_Framework_TestCase;
 
-include __DIR__.'/../vendor/autoload.php';
-
 class ScssCompilerTest extends PHPUnit_Framework_TestCase
 {
     /**
