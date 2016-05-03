@@ -18,7 +18,8 @@ $css_file = "path/to/style.css";
 // Inhalt der SCSS-Datei auslesen
 $scss = file_get_contents($scss_file);
 // SCSS mithilfe des ScssCompilers in CSS übersetzen
-$css = ScssCompiler::compile($scss);
+$compiler = new ScssCompiler;
+$css = $compiler->compile($scss);
 // CSS-Code in die jeweilige Datei schreiben
 file_put_contents($css_file, $css);
 ```
