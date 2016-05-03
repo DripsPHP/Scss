@@ -12,7 +12,8 @@ class ScssCompilerTest extends PHPUnit_Framework_TestCase
      */
     public function testScssCompiler($scss, $css)
     {
-        $this->assertEquals(ScssCompiler::compile($scss), $css);
+        $compiler = new ScssCompiler;
+        $this->assertEquals($compiler->compile($scss), $css);
     }
 
     public function dateProvider()
