@@ -13,7 +13,7 @@ class Controller extends CompileController
     public function compile($content)
     {
         $compiler = new ScssCompiler;
-        $compiler->setImportPath($this->source_directory);
+        $compiler->setImportPaths($this->source_directory);
         return $compiler->compile($content);
     }
 }
