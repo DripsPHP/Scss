@@ -12,5 +12,6 @@
         "psr-4": {
             "Drips\\ScssCompiler\\": "src"
         }
-    }
+    },
+        "minimum-stability": "dev"
 }
