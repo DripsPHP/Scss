@@ -7,7 +7,7 @@ use Drips\MinimizeCompiler\MinimizeCompiler;
 
 class Controller extends CompileController
 {
-    protected $source_directory = "scss";
+    protected $source_directory = DRIPS_DIRECTORY."/scss";
     protected $file_extension = "scss";
     protected $response_type = "text/css";
     protected $minimize = true;
