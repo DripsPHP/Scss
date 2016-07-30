@@ -32,4 +32,4 @@ In deinem `DRIPS` Verzeichnis legst du zunächst ein Verzeichnis `scss` an. In d
 <?php
 
 $router->add('scss', '/css/{file}.css', Drips\Scss\Controller::class);
-``
+```
