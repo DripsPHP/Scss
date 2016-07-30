@@ -19,7 +19,7 @@ $css_file = "path/to/style.css";
 $scss = file_get_contents($scss_file);
 // SCSS mithilfe des ScssCompilers in CSS übersetzen
 $compiler = new Compiler;
-$css = $compiler``->compile($scss);
+$css = $compiler->compile($scss);
 // CSS-Code in die jeweilige Datei schreiben
 file_put_contents($css_file, $css);
 ```
