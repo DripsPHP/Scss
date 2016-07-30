@@ -19,7 +19,7 @@ $css_file = "path/to/style.css";
 $scss = file_get_contents($scss_file);
 // SCSS mithilfe des ScssCompilers in CSS übersetzen
 $compiler = new Compiler;
-$css = $compiler->compile($scss);
+$css = $compiler``->compile($scss);
 // CSS-Code in die jeweilige Datei schreiben
 file_put_contents($css_file, $css);
 ```
@@ -28,6 +28,8 @@ Zusätzlich beinhaltet der ScssCompiler einen Controller zum automatischen Ausli
 
 In deinem `DRIPS` Verzeichnis legst du zunächst ein Verzeichnis `scss` an. In diesem befinden sich alle deine SCSS-Dateien, die du später gerne übersetzt ausliefern möchtest. Anschließend musst du den jeweiligen Controller als Route registrieren, dass die Datei automatisch ausgeliefert werden kann.
 
+```php
 <?php
 
 $router->add('scss', '/css/{file}.css', Drips\Scss\Controller::class);
+``
