@@ -1,11 +1,11 @@
 <?php
 
-namespace Drips\ScssCompiler;
+namespace Drips\Scss;
 
+use Drips\Minimize\Compiler as MinimizeCompiler;
 use Drips\MVC\CompileController;
-use Drips\MinimizeCompiler\MinimizeCompiler;
 
-define('DRIPS_SCSS_DIRECTORY', DRIPS_DIRECTORY.'/scss');
+define('DRIPS_SCSS_DIRECTORY', (defined('DRIPS_DIRECTORY') ? DRIPS_DIRECTORY : __DIR__) . '/scss');
 
 class Controller extends CompileController
 {
@@ -16,10 +16,10 @@ class Controller extends CompileController
 
     public function compile($content)
     {
-        $compiler = new ScssCompiler;
+        $compiler = new Compiler;
         $compiler->setImportPaths($this->source_directory);
         $compiled = $compiler->compile($content);
-        if($this->minimize){
+        if ($this->minimize) {
             $compiled = MinimizeCompiler::compile($compiled, MinimizeCompiler::CSS);
         }
         return $compiled;
